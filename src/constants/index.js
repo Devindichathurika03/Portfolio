@@ -8,20 +8,22 @@ import {
   html,
   css,
   reactjs,
-  redux,
+  reactnative,
   tailwind,
   nodejs,
   mongodb,
   git,
   figma,
-  docker,
+  mysql,
   meta,
   starbucks,
   tesla,
   shopify,
-  carrent,
-  jobit,
-  tripguide,
+  ariyahome,
+  linkora,
+  planora,
+  clarifi,
+  happytails,
   threejs,
 } from "../assets";
 
@@ -46,15 +48,15 @@ const services = [
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "Front-End Developer",
     icon: mobile,
   },
   {
-    title: "Backend Developer",
+    title: "Back-End Developer",
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "Full-Stack Developer",
     icon: creator,
   },
 ];
@@ -81,8 +83,8 @@ const technologies = [
     icon: reactjs,
   },
   {
-    name: "Redux Toolkit",
-    icon: redux,
+    name: "React Native",
+    icon: reactnative,
   },
   {
     name: "Tailwind CSS",
@@ -109,8 +111,8 @@ const technologies = [
     icon: figma,
   },
   {
-    name: "docker",
-    icon: docker,
+    name: "MySQL",
+    icon: mysql,
   },
 ];
 
@@ -197,69 +199,72 @@ const testimonials = [
 ];
 
 const projects = [
-  {
-    name: "Car Rent",
-    description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: carrent,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Job IT",
-    description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "restapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: jobit,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
-  },
+{
+  name: "AriyaHome Construction Pvt Ltd",
+  description:
+    "Full Stack web app built with the MERN stack and Tailwind CSS to streamline client inquiries and service management for construction businesses, providing a faster, cleaner, and more reliable digital workflow.",
+  tags: [
+    { name: "react", color: "blue-text-gradient" },
+    { name: "tailwind", color: "pink-text-gradient" },
+    { name: "MERN", color: "green-text-gradient" },
+    
+  ],
+  image: ariyahome, 
+  source_code_link: "https://github.com/Devindichathurika03/AriyaHomeFrontend.git",
+},
+{
+  name: "Linkora-A Social Networking Platform",
+  description:
+    "Full-stack web app built as a university project to showcase student talent and connect students with complementary skills and shared interests, fostering collaboration and opportunities on campus.",
+  tags: [
+    { name: "nextjs", color: "blue-text-gradient" },
+    { name: "tailwind", color: "pink-text-gradient" },
+     { name: "express", color: "green-text-gradient" }
+  ],
+  image: linkora, 
+  source_code_link: "https://github.com/ATgayan/Linkora-Frontend.git", // add GitHub repo if available
+},
+{
+  name: "Planora-Event Planning Platform",
+  description:
+    "Interactive event planning platform where users can plan events step-by-step and explore a curated vendor marketplace, built with a focus on intuitive UI/UX and seamless frontend interactions.",
+  tags: [
+    { name: "react", color: "blue-text-gradient" },
+    { name: "typescript", color: "green-text-gradient" },
+    { name: "tailwind", color: "pink-text-gradient" },
+  ],
+  image: planora, 
+  source_code_link: "https://github.com/Devindichathurika03/Planora.git",
+},
+{
+  name: "ClariFi-AI-Powered Decision Companion",
+  description:
+    "AI-powered web app that helps users make clearer decisions by analyzing situations and providing actionable guidance, reducing stress and saving time.",
+  tags: [
+    { name: "react", color: "blue-text-gradient" },
+    { name: "typescript", color: "green-text-gradient" },
+    { name: "tailwind", color: "pink-text-gradient" },
+    { name: "nodejs", color: "green-text-gradient" },
+    { name: "express", color: "green-text-gradient" },
+    { name: "cohere-ai", color: "purple-text-gradient" },
+  ],
+  image: clarifi, 
+  source_code_link: "https://github.com/Devindichathurika03/ClariFi.git",
+},
+{
+  name: "HappyTails",
+  description:
+    "Modern pet adoption platform connecting adopters, shelters, and pet owners, providing smart filters, detailed profiles, and secure communication to make the adoption process faster and more efficient.",
+  tags: [
+    { name: "react", color: "blue-text-gradient" },
+    { name: "springboot", color: "green-text-gradient" },
+    { name: "sql", color: "orange-text-gradient" },
+    { name: "figma", color: "blue-text-gradient" },
+  ],
+  image: happytails, 
+  source_code_link: "https://github.com/independent-project-2/HappyTail-Frontend.git", 
+ 
+},
 ];
 
 export { services, technologies, experiences, testimonials, projects };
