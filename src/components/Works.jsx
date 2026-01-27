@@ -1,12 +1,12 @@
-import React from "react";
-import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
+import Tilt from "react-parallax-tilt";
 
-import { styles } from "../styles";
 import { github } from "../assets";
-import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
+import { SectionWrapper } from "../hoc";
+import { styles } from "../styles";
 import { fadeIn, textVariant } from "../utils/motion";
+
 
 const ProjectCard = ({
   index,
@@ -69,7 +69,7 @@ const ProjectCard = ({
 
 const Works = () => {
   return (
-    <>
+    <div >
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText} `}>My work</p>
         <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
@@ -84,13 +84,15 @@ const Works = () => {
         </motion.p>
       </div>
 
-      <div className='mt-20 flex flex-wrap gap-7'>
+      <div className='mt-10 flex flex-wrap gap-7'>
         {projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
       </div>
-    </>
+       
+    </div>
   );
 };
 
-export default SectionWrapper(Works, "");
+
+export default SectionWrapper(Works, "Works");

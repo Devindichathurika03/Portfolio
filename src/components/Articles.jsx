@@ -1,63 +1,59 @@
+
 import { motion } from "framer-motion";
-import { ExternalLink, TrendingUp, Calendar, Eye } from "lucide-react";
+import { Calendar, ExternalLink, TrendingUp } from "lucide-react";
 import { useState } from "react";
+import { SectionWrapper } from "../hoc";
+import { styles } from "../styles";
 
 const articles = [
-  {
-    id: 1,
-    title: "Building Scalable React Applications: Lessons from Real Projects",
-    excerpt: "Exploring architecture patterns, state management strategies, and performance optimization techniques I've learned while building production-ready applications.",
-    date: "January 10, 2026",
-    readTime: "5 min read",
-    views: "1.2K",
-    engagement: "156 reactions",
-    tags: ["React", "Architecture", "Best Practices"],
-    link: "https://linkedin.com/in/devindi/article-1",
-    color: "from-purple-500 to-pink-500",
-  },
-  {
-    id: 2,
-    title: "The Power of Continuous Learning in Tech",
-    excerpt: "How I stay updated with the latest technologies, my learning strategies, and why being a perpetual student is crucial for software developers.",
-    date: "December 28, 2025",
-    readTime: "4 min read",
-    views: "980",
-    engagement: "124 reactions",
-    tags: ["Career", "Learning", "Growth"],
-    link: "https://linkedin.com/in/devindi/article-2",
-    color: "from-cyan-500 to-blue-500",
-  },
-  {
-    id: 3,
-    title: "From Idea to Deployment: My First Full-Stack Project",
-    excerpt: "A detailed walkthrough of building and deploying a full-stack application, including challenges faced, lessons learned, and key takeaways for aspiring developers.",
-    date: "December 15, 2025",
-    readTime: "7 min read",
-    views: "1.5K",
-    engagement: "203 reactions",
-    tags: ["Full-Stack", "Tutorial", "DevOps"],
-    link: "https://linkedin.com/in/devindi/article-3",
-    color: "from-emerald-500 to-teal-500",
-  },
-  {
-    id: 4,
-    title: "UI/UX Principles Every Developer Should Know",
-    excerpt: "Bridging the gap between design and development by understanding core UX principles that lead to better user experiences and more effective products.",
-    date: "November 30, 2025",
-    readTime: "6 min read",
-    views: "2.1K",
-    engagement: "287 reactions",
-    tags: ["UI/UX", "Design", "Frontend"],
-    link: "https://linkedin.com/in/devindi/article-4",
-    color: "from-indigo-500 to-purple-500",
-  },
+{
+  id: 1,
+  title: "Building Scalable React Applications: Lessons from Real Projects",
+  excerpt:
+    "A deep dive into scalable React architecture, real-world state management decisions, and performance optimization techniques applied in production-grade software projects.",
+  date: "January 10, 2026",
+  tags: ["React", "Scalability", "Architecture", "Performance"],
+  link: "https://www.linkedin.com/pulse/from-props-popcorn-how-i-took-my-first-leap-react-devindi-chathurika-2mpic/",
+  color: "from-purple-500 to-pink-500",
+},
+{
+  id: 2,
+  title: "Level Up Your React Skills with Hooks",
+  excerpt:
+    "A beginner-friendly yet practical breakdown of React Hooks, explaining how hooks like useState, useEffect, and useContext transformed my understanding of React from confusion to confident, intentional development.",
+  date: "December 15, 2025",
+  tags: ["React", "Hooks", "Frontend", "JavaScript"],
+  link: "https://www.linkedin.com/pulse/classes-just-hooks-my-react-glow-up-devindi-chathurika-7jgcc/",
+  color: "from-cyan-500 to-blue-500",
+},
+ {
+  id: 3,
+  title: "Tutorial Hell vs Real MERN Projects",
+  excerpt:
+    "A reflection on breaking out of tutorial hell by building a real-world MERN application. This article shares how working on the Ariyahome Construction website reshaped my understanding of full-stack development, system design, and professional problem-solving.",
+  date: "December 24, 2025",
+  tags: ["MERN", "React", "Real-World Projects", "Full Stack"],
+  link: "https://www.linkedin.com/pulse/tutorial-hell-vs-real-mern-projects-devindi-chathurika-qlvzc/",
+  color: "from-orange-500 to-red-500",
+},
+{
+  id: 4,
+  title: "AI Isn’t Scary, It’s Your New Project Sidekick",
+  excerpt:
+    "A beginner-friendly guide to integrating AI into real software projects. This article breaks down AI providers, API integration challenges, and how AI can support real decision-making using structured outputs—based on building the ClariFi AI web app with Cohere.",
+  date: "December 30, 2025",
+  tags: ["AI", "Cohere", "Web Development", "Real Projects"],
+  link: "https://www.linkedin.com/pulse/ai-isnt-scary-its-your-new-project-sidekick-devindi-chathurika-qgedc/",
+  color: "from-indigo-500 to-purple-500",
+},
 ];
 
-export default function Articles() {
-  const [hoveredArticle, setHoveredArticle] = useState<number | null>(null);
+function Articles() {
+  
+  const [hoveredArticle, setHoveredArticle] = useState(null);
 
   return (
-    <section id="articles" className="relative py-24 px-6 overflow-hidden">
+    <section id="articles" className="relative py-1 px-6 overflow-hidden "> 
       {/* Background elements */}
       <div className="absolute top-1/3 left-0 w-96 h-96 bg-gradient-to-br from-indigo-500/5 to-transparent rounded-full blur-3xl" />
       <div className="absolute bottom-1/3 right-0 w-96 h-96 bg-gradient-to-br from-purple-500/5 to-transparent rounded-full blur-3xl" />
@@ -71,12 +67,9 @@ export default function Articles() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 border border-indigo-500/20 rounded-full backdrop-blur-sm mb-6">
-            <TrendingUp className="w-4 h-4 text-indigo-400" />
-            <span className="text-sm text-indigo-300">Sharing Knowledge</span>
-          </div>
-          <h2 className="text-4xl md:text-5xl mb-4 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
-            LinkedIn Articles
+         
+          <h2 className={`${styles.sectionHeadText}`}>
+            LinkedIn Articles.
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             Sharing insights, tutorials, and lessons learned from my development journey
@@ -141,10 +134,6 @@ export default function Articles() {
                     <Calendar className="w-3 h-3" />
                     {article.date}
                   </div>
-                  <div className="flex items-center gap-1">
-                    <Eye className="w-3 h-3" />
-                    {article.views} views
-                  </div>
                   <div>{article.readTime}</div>
                 </div>
 
@@ -159,7 +148,6 @@ export default function Articles() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-1 text-sm text-gray-400 hover:text-purple-400 transition-colors group/link"
-                    onClick={(e) => e.preventDefault()}
                   >
                     Read Article
                     <ExternalLink className="w-3 h-3 group-hover/link:translate-x-1 transition-transform" />
@@ -182,11 +170,10 @@ export default function Articles() {
           className="text-center"
         >
           <a
-            href="https://linkedin.com/in/devindi"
+            href="https://www.linkedin.com/in/devindi-chathurika/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 border border-indigo-500/20 rounded-xl hover:border-indigo-500/40 backdrop-blur-sm transition-all group"
-            onClick={(e) => e.preventDefault()}
           >
             <TrendingUp className="w-5 h-5 text-indigo-400" />
             <span className="text-white">Follow me on LinkedIn for more articles</span>
@@ -194,37 +181,10 @@ export default function Articles() {
           </a>
         </motion.div>
 
-        {/* Stats overview */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12"
-        >
-          {[
-            { label: "Articles Published", value: "15+" },
-            { label: "Total Views", value: "12K+" },
-            { label: "Engaged Readers", value: "1.5K+" },
-            { label: "Topics Covered", value: "8+" },
-          ].map((stat, index) => (
-            <motion.div
-              key={stat.label}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
-              className="text-center p-4 bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 rounded-xl"
-            >
-              <div className="text-2xl mb-1 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
-                {stat.value}
-              </div>
-              <div className="text-sm text-gray-400">{stat.label}</div>
-            </motion.div>
-          ))}
-        </motion.div>
+        
       </div>
     </section>
   );
 }
 
+export default SectionWrapper(Articles, "Articles", "!pt-0");

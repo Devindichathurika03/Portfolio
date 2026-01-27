@@ -38,19 +38,32 @@ const ServiceCard = ({ index, title, icon }) => (
 const About = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>Overview.</h2>
+      <motion.div variants={textVariant()} className="flex flex-col md:flex-row items-center md:items-start gap-8 pb-10">
+        {/* Text */}
+        <div className="flex-1">
+          <p className={styles.sectionSubText}>Introduction</p>
+          <h2 className={styles.sectionHeadText}>Overview.</h2>
+
+          <motion.p
+            variants={fadeIn("", "", 0.1, 1)}
+            className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
+          >
+            I’m a software developer skilled in JavaScript and TypeScript, with experience in the MERN stack (MongoDB, Express, React, Node.js) and Three.js. I’m a fast learner and enjoy collaborating with clients to build efficient, scalable, and user-friendly solutions that solve real-world problems. I’m excited to learn modern technologies, stay up-to-date, and apply them practically to create interactive web experiences. I also love to share my knowledge and write about what I discover, helping others grow alongside me. Let’s build something awesome together!
+          </motion.p>
+        </div>
+
+        {/* Photo */}
+        <div className="flex-shrink-0 w-48 h-48  md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-purple-500 mt-10">
+          <img
+            src="./Me.png" 
+            alt="Devindi Chathurika"
+            className="w-full h-full object-cover"
+          />
+        </div>
       </motion.div>
 
-      <motion.p
-        variants={fadeIn("", "", 0.1, 1)}
-        className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
-      >
-        I’m a software developer skilled in JavaScript and TypeScript , with experience in the MERN stack (MongoDB, Express, React, Node.js) and Three.js. I’m a fast learner and enjoy collaborating with clients to build efficient, scalable, and user-friendly solutions that solve real-world problems. I’m excited to learn modern technologies, stay up-to-date, and apply them practically to create interactive web experiences. I also love to share my knowledge and write about what I discover, helping others grow alongside me , let’s build something awesome together!
-      </motion.p>
-
-      <div className='mt-20 flex flex-wrap gap-10'>
+      {/* Services cards */}
+      <div className="mt-20 flex flex-wrap gap-10 justify-center">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
@@ -58,5 +71,6 @@ const About = () => {
     </>
   );
 };
+
 
 export default SectionWrapper(About, "about");

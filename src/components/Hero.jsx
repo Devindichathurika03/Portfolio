@@ -5,9 +5,9 @@ import { styles } from "../styles";
 
 const Hero = () => {
   return (
-    <section className={`relative w-full h-screen mx-auto`}>
-      <div
-        className={`absolute inset-0 top-[120px]  max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
+    
+    <section className={`relative w-full mx-auto`}>
+      <div className={`max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5 pt-[120px] pb-10`}
       >
         <div className='flex flex-col justify-center items-center mt-5'>
           <div className='w-5 h-5 rounded-full bg-[#915EFF]' />
@@ -32,7 +32,7 @@ const Hero = () => {
           className="flex mt-5 gap-6"
         >
           <a
-            href="https://github.com/devindi"
+            href="https://github.com/Devindichathurika03"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 hover:border-purple-500/50 transition-all hover:scale-110"
@@ -40,7 +40,7 @@ const Hero = () => {
             <Github className="w-5 h-5 text-gray-300" />
           </a>
           <a
-            href="https://linkedin.com/in/devindi"
+            href="https://www.linkedin.com/in/devindi-chathurika-17459b237/"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 hover:border-cyan-500/50 transition-all hover:scale-110"
@@ -48,7 +48,7 @@ const Hero = () => {
             <Linkedin className="w-5 h-5 text-gray-300" />
           </a>
           <a
-            href="mailto:devindi@example.com"
+            href="devindichathurika03@gmail.com"
             className="p-3 bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 hover:border-purple-500/50 transition-all hover:scale-110"
           >
             <Mail className="w-5 h-5 text-gray-300" />

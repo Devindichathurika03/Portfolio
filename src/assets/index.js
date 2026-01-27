@@ -32,6 +32,10 @@ import planora from "./planora.png";
 import clarifi from "./clarifi.png";
 import happytails from "./happytails.png";
 
+import  chat from "./chat.png";
+import  seo from "./seo.png";
+import  time from "./time.png";
+
 
 export {
   logo,
@@ -64,4 +68,7 @@ export {
   planora,
   clarifi,
   happytails,
+  chat,
+  seo,
+  time,
 };

@@ -15,16 +15,19 @@ import {
   git,
   figma,
   mysql,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
   ariyahome,
   linkora,
   planora,
   clarifi,
   happytails,
   threejs,
+  starbucks,
+  tesla,
+  shopify,
+  meta,
+  chat,
+  seo,
+  time,
 } from "../assets";
 
 export const navLinks = [
@@ -33,8 +36,16 @@ export const navLinks = [
     title: "About",
   },
   {
-    id: "work",
-    title: "Work",
+    id: "Works",
+    title: "Works",
+  },
+  {
+    id: "Skills",
+    title: "Skills",
+  },
+   {
+    id: "Articles",
+    title: "Articles",
   },
   {
     id: "contact",
@@ -267,4 +278,22 @@ const projects = [
 },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+const abilities = [
+  {
+    img: seo,
+    title: "Quality Focus",
+    desc: "Delivering high-quality results while maintaining attention to every detail.",
+  },
+  {
+    img: chat,
+    title: "Reliable Communication",
+    desc: "Keeping you updated at every step to ensure transparency and clarity.",
+  },
+  {
+    img: time,
+    title: "On-Time Delivery",
+    desc: "Making sure projects are completed on schedule, with quality & attention to detail.",
+  },
+];
+
+export { services, technologies, experiences, testimonials, projects, abilities };
