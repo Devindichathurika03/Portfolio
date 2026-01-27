@@ -43,7 +43,7 @@ This portfolio showcases my **projects, skills, and creativity**, demonstrating 
 ## 📬 Contact Me
 You can reach me through:  
 - **Email:** [devindichathurika03@gmail.com](mailto:devindichathurika03@gmail.com)  
-- **WhatsApp:** [Click to message](https://wa.me/95760734100)  
+
 
 ---
 
