@@ -57,7 +57,7 @@ const About = () => {
           <img
             src="./Me.png" 
             alt="Devindi Chathurika"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover" 
           />
         </div>
       </motion.div>
