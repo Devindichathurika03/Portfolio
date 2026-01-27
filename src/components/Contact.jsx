@@ -31,18 +31,17 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
 
-    emailjs
-      .send(
-        import.meta.env.service_16945jcD,
-        import.meta.env.template_6o0rhd7,
-        {
-          from_name: form.name,
-          to_name: "Devindi Chathurika",
-          from_email: form.email,
-          to_email: "devindichathurika03@email.com",
-          message: form.message,
-        },
-        import.meta.env.s79hIONVp2687jR2q
+  emailjs.send(
+  import.meta.env.VITE_EMAILJS_SERVICE_ID,      
+  import.meta.env.VITE_EMAILJS_TEMPLATE_ID,    
+  {
+    from_name: form.name,                        
+    to_name: "Devindi Chathurika",               
+    from_email: form.email,                      
+    to_email: "devindichathurika03@gmail.com",  
+    message: form.message,                       
+  },
+  import.meta.env.VITE_EMAILJS_PUBLIC_KEY  
       )
       .then(
         () => {
