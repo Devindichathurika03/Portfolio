@@ -22,7 +22,8 @@
     "react-parallax-tilt": "^1.7.317",
     "react-router-dom": "^6.30.3",
     "react-vertical-timeline-component": "^3.6.0",
-    "three": "^0.182.0"
+    "three": "^0.182.0",
+    "three-mesh-bvh": "^0.8.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.27",
