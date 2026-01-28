@@ -1,6 +1,6 @@
 import React from "react";
 
-import { BallCanvas } from "./canvas";
+const BallCanvas = React.lazy(() => import("../components/canvas/Ball"));
 import { SectionWrapper } from "../hoc";
 import { technologies } from "../constants";
 
